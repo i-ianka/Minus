@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+     <meta name="description" content="MINUS: Consumir é preciso. Ser consciente também.">
+     <meta name="keywords" content="HTML,CSS,Consumismo,Educação Ambiental,Consumo Consciente,Design">
+  <meta name="author" content="">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+     
+
+    <title>MINUS</title>
+
+  <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+   <script src="js/elementos-query.js"></script>
+
+
+  <script src="js/jquery.min.js"></script>  
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script
+    type="text/javascript"
+    src="js/jquery-1.7.1.js"
+    
+  ></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    
+<script type="text/javascript"></script>
+  <style type="text/css">
+
+
+
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    $(window).load(function(){
+      
+  $(document).ready(function() {
+
+ 
+    $(".drag").draggable({
+       revert: "invalid"
+    });
+
+    $(".sort").droppable({
+     drop: function( event, ui ) {
+         if(!($(this).children(".drag").size() == 1)) {
+             $(ui.draggable[0]).appendTo($(this));
+             ui.draggable.css({
+                    left: 0,
+                    top: 0
+                })
+         } else {
+            $(ui.draggable[0]).draggable("option","revert",true);
+         }
+      }
+
+    });
+  });
+
+    });
+
+</script>
+
+  <div class="wrapper">
+    <div id="mensagem">
+  <center> <img src="img/logo.svg" style="zoom:120%" />
+<hr/>  
+ <h2>PARA ACESSAR  NOSSO WEBAPP UTILIZE<br> UM TABLET OU CELULAR.</h2> 
+   <h3>OBRIGADO!</h3></center>  
+    </div>
+  </div>
+
+
+<div id="restricao">
+
+    <!-- Header -->
+    <header class="home d-flex">  
+
+         <!-- Header -->
+   <div class="navbar-header">
+        <div class="barra-menu">      <div class="toggle-button" id="toggle">
+                <span class="bar top"></span>
+                <span class="bar middle"></span>
+                <span class="bar bottom"></span>
+            </div>
+                 <a class="navbar-brand2" href="home.html">  <img src="img/logo.svg"  style="zoom:74%"></a>
+                 </div>
+</div>
+
+         <nav class="overlay" id="overlay">
+  <ul>
+ <li></li>
+  <li><br><br><a href="home.html" class="link-menu linha-menu"><span>A SÉRIE</span></a></li>
+    <li ><a href="home.html#projeto"  id="toggle" class="link-menu linha-menu1 linha-menu"><span>O PROJETO</span></a></li>
+    <li><a href="consumismo.html" class="link-menu  linha-menu2  linha-menu"><span>CONSUMISMO</span></a></li>
+     <li><a href="orientacao.html" class="link-menu  linha-menu5 linha-menu"><span>ORIENTAÇÃO</span></a></li>
+        <li><a href="home.html#quem-somoss" class="link-menu linha-menu2  linha-menu"><span>QUEM SOMOS</span></a></li>
+ </ul>
+</nav>  
+      
+    </header>
+<!-- abas -->
+<div id="div_aba1" class="fade-page"> 
+  <section class="content-section3" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+     <h1 style="font-family: 'Qanelas-Bold'; ">O CONSUMO<br> DO LIXO</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Quando foi a última vez que você comprou algo que não era essencial (vestuário, eletrônicos, entre outros)?
+     </h3>
+     <div id="diminuir">
+
+    
+
+<div class='tours'>
+        <div>
+            <img style="width: 40%;">
+        </div> <br>
+        <div>
+          <p id="titulo-q"></p>
+        </div>
+ </div>
+   <form action="" id="grau">
+   <p>+ <input type="range" id="slider" min="0" max="100" step="20"> -</p>
+ </form>
+    <script type="text/javascript">
+         var scale = [0, 20, 40, 60, 80, 100];
+    var range = {
+        0: {src : 'img/24horas.svg', rangeText:  'Nas últimas 24 horas'},
+        20: {src : 'img/umasemana.svg', rangeText:  'Na última semana'},
+        40: {src : 'img/ummes.svg', rangeText:  ' No último mês'},
+        60: {src : 'img/tresmeses.svg', rangeText:  'Nos últimos três meses'},
+           80: {src : 'img/seismeses.svg', rangeText:  'Nos últimos seis meses'},
+              100: {src : 'img/umano.svg', rangeText:  'No último ano'}
+    };
+
+    slideVal = 80;
+
+    $('#slider').on('input change', function(){
+
+        slideVal =  $('#slider').val();
+        update();
+    });
+
+    update();
+
+    function update(){
+
+            $('.tours img').attr('src', range[slideVal].src);
+            $('.tours p').text(range[slideVal].rangeText);
+             $('.tours span').text(range[slideVal].rangeText);
+    }
+    </script>
+<br>
+
+</div>
+     <a href="#" class=" quiz-botao" id="mostra_aba2"  onclick="mostrar_abas(this);">PRÓXIMO</a>
+   </section>
+ </div>
+
+
+ <div id="div_aba2" class="fade-page" style="display:none;">
+ 
+
+  <section class="content-section2" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+     <h1 style="font-family: 'Qanelas-Bold'; ">O CONSUMO<br> DO LIXO</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Em maior frequência, qual o tipo de produto que você mais consome desnecessariamente e/ou em excesso?
+     </h3>
+    <center> 
+<div id="diminuir"> 
+
+ <div class="div-quiz1">
+     	<br>
+     	<h2>COMPRAS</h2>
+  <div id="div-quiz1"><hr/> </div> 
+
+
+<table>
+  <tbody>
+    <tr>
+      <td class="sort" id="3"  ></td>
+      <td>1</td>
+    
+    </tr>
+    <tr>
+      <td class="sort" id="3" ></td>
+      <td>2</td>
+     
+    </tr>
+    <tr>
+      <td class="sort" ></td>
+      <td>3</td>
+     
+    </tr>
+    <tr>
+      <td class="sort"  ></td>
+      <td>4</td>
+      
+    </tr>
+
+       <tr>
+      <td  class="sort2"><br>TOTAL</td>
+      <td  class="sort2"><br>EXCESSO</td>
+      
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<br>
+<style type="text/css">#container {
+    width: 100%;
+    border-color: blue;
+    text-align: center;
+
+}
+
+.box {
+    display: inline-block;
+    width: 130px; height: 32px;
+    margin:  10px;
+}
+
+#box-1 { background-color: #C63B34; padding-top: 5px; }
+</style>
+
+<div id="container">
+    <div id="box-1" class="drag box">ALIMENTOS</div>
+    <div id="box-1" class="drag box">LAZER</div><br>
+    <div id="box-1" class=" drag box">VESTIMENTAS</div>
+    <div id="box-1" class="drag box">ELETRÔNICOS</div>
+    <hr> 
+</div><a id="myBtn"> <p> Para responder, pressiona<br> o texto e arraste para posicionar.</p></a>
+</div><br> <a href="#" class="quiz-botao2" id="mostra_aba3" onclick="mostrar_abas(this);">PRÓXIMO</a> </section>
+</div>
+
+
+
+ <div id="div_aba3" class="fade-page"  style="display:none;"> 
+   <section class="content-section3" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+      <h1 style="font-family: 'Qanelas-Bold'; ">O CONSUMO<br> DO LIXO</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Geralmente, você pensa em comprar por quais motivos?
+     </h3>
+
+
+      <div style="display: inline-flex;">   
+       
+ <div   class="image3">
+     <a onclick="mute(); changeImage(this)"  id="mute">
+ <img src="img/emocionais.svg"  id="play" />
+    <img src="img/emocionais-active.svg"   id="pause" />
+</a>
+
+</div>  
+   <div    class="image3">
+ <a onclick="mute(); changeImage(this)" id="mute">
+ <img src="img/lancamento.svg"   id="play" />
+    <img src="img/lancamento-active.svg"   id="pause" />
+</a>
+ 	
+</div>
+
+
+ </div> 
+
+      <div style="display: inline-flex;">   
+       
+ <div    class="image3">
+     <a onclick="mute(); changeImage(this)"  id="mute">
+ <img src="img/promocao.svg"  id="play" />
+    <img src="img/promocao-active.svg"   id="pause" />
+</a>
+
+</div> 
+          <div  class="image3">
+<a onclick="mute(); changeImage(this)" id="mute">
+ <img src="img/necessidade.svg"   id="play" />
+    <img src="img/necessidade-active.svg"   id="pause" />
+</a>
+ 
+</div>
+<br>
+
+ </div> 
+  </section><br>
+ <a href="info-1.html"  id="mostra_aba3" class=" quiz-botao">PRÓXIMO</a>
+  <br>
+<br>
+
+</div>
+
+
+  
+      </div>
+  
+    <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    
+ <span class="close">&times;</span>
+         </div>
+    <div class="modal-body"> 
+  <h3><b>Para responder, pressiona o texto e arraste para posicionar.</b></h3> 
+    <br>
+    </div>
+   
+  </div>
+
+
+</div>
+
+
+  </div>
+
+
+</body>
+
+
+<script type="text/javascript">
+  function mostrar_abas(obj) {
+
+    document.getElementById('div_aba1').style.display="none";
+    document.getElementById('div_aba2').style.display="none";
+    document.getElementById('div_aba3').style.display="none";
+
+    switch (obj.id) {
+      case 'mostra_aba1':
+      document.getElementById('div_aba1').style.display="block";
+      break
+      case 'mostra_aba2':
+      document.getElementById('div_aba2').style.display="block";
+      break
+      case 'mostra_aba3':
+      document.getElementById('div_aba3').style.display="block";
+      break
+
+    }
+  }
+</script>
+
+
+
+    <script type="text/javascript">
+window.onload=function(){
+
+var dragSatMS = null;
+
+function handleDragStart(e) {
+  //this.style.color = 'green'; 
+  dragSatMS = this;
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text', this.innerHTML);
+}
+
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  e.dataTransfer.dropEffect = 'move';
+  return false;
+}
+
+function handleDragEnter(e) {
+  this.classList.add('over');
+}
+
+function handleDragLeave(e) {
+  this.classList.remove('over');
+  //this.style.color = '#333';  
+}
+
+function handleDrop(e) {
+  if (e.stopPropagation) {
+    e.stopPropagation();
+  }
+  if (dragSatMS != this) {
+    dragSatMS.innerHTML = this.innerHTML;
+    this.innerHTML = e.dataTransfer.getData('text');
+    //Get the data-compras-id of both items.
+    itemToReplaceAttr = this.attributes["data-compras-id"].value;
+    draggedItemAttr = dragSatMS.attributes["data-compras-id"].value;
+    //Call "setAttribute" to update the attributes.
+    this.setAttribute("data-compras-id", draggedItemAttr);
+    dragSatMS.setAttribute("data-compras-id", itemToReplaceAttr);
+  }
+  return false;
+}
+
+function handleDragEnd(e) {
+  [].forEach.call(mssatCols, function(mSatCol) {
+    mSatCol.classList.remove('over');
+    //mSatCol.style.color = '#333';
+  });
+}
+var mssatCols = document.querySelectorAll('#ms-saturday .compras-name');
+[].forEach.call(mssatCols, function(msSatCol) {
+  msSatCol.addEventListener('dragstart', handleDragStart, false);
+  msSatCol.addEventListener('dragenter', handleDragEnter, false);
+  msSatCol.addEventListener('dragover', handleDragOver, false);
+  msSatCol.addEventListener('dragleave', handleDragLeave, false);
+  msSatCol.addEventListener('drop', handleDrop, false);
+  msSatCol.addEventListener('dragend', handleDragEnd, false);
+});
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+
+function mute() {}
+
+function changeImage(obj) {
+    obj.classList.toggle('playing');
+}
+
+
+
+
+
+
+</script>
+
+
+
+ 
+
+<script type="text/javascript">
+  $('#toggle').click(function() {
+    $(this).toggleClass('toggle-active');
+    $('#overlay').toggleClass('nav-active');
+});</script>
+
+
+
+</html>

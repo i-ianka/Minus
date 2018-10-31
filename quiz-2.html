@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+     <meta name="description" content="MINUS: Consumir é preciso. Ser consciente também.">
+     <meta name="keywords" content="HTML,CSS,Consumismo,Educação Ambiental,Consumo Consciente,Design">
+  <meta name="author" content="">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+     
+
+    <title>MINUS</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilo.css" rel="stylesheet">
+
+  <script src="js/jquery.min.js"></script>  
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+  <div class="wrapper">
+    <div id="mensagem">
+  <center> <img src="img/logo.svg" style="zoom:120%" />
+<hr/>  
+ <h2>PARA ACESSAR NOSSO WEBAPP UTILIZE<br> UM TABLET OU CELULAR.</h2> 
+   <h3>OBRIGADO!</h3></center>  
+    </div>
+  </div>
+
+
+<div id="restricao">
+  <!-- Header -->
+  <div class="navbar-header">
+    <div class="barra-menu">      <div class="toggle-button" id="toggle">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+    </div>
+    <a class="navbar-brand" href="home.html">  <img src="img/logo.svg" style="zoom:70%" ></a>
+  </div>
+</div>
+
+         <nav class="overlay" id="overlay">
+  <ul>
+ <li></li>
+  <li><br><br><a href="home.html" class="link-menu linha-menu"><span>A SÉRIE</span></a></li>
+    <li ><a href="home.html#projeto"  id="toggle" class="link-menu linha-menu1 linha-menu"><span>O PROJETO</span></a></li>
+    <li><a href="consumismo.html" class="link-menu  linha-menu2  linha-menu"><span>CONSUMISMO</span></a></li>
+     <li><a href="orientacao.html" class="link-menu  linha-menu5 linha-menu"><span>ORIENTAÇÃO</span></a></li>
+        <li><a href="home.html#quem-somoss" class="link-menu linha-menu2  linha-menu"><span>QUEM SOMOS</span></a></li>
+ </ul>
+</nav>  
+
+
+<!-- abas -->
+<div id="div_aba1" > 
+  <section class="content-section3" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+     <h1 style="font-family: 'Qanelas-Bold'; ">SOMOS O QUE COMPRAMOS?</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Se você encontra um produto que te interessa, mas você não precisa, 
+quais fatores influenciam na sua 
+decisão de compra?
+
+     </h3> 
+
+
+      <div style="display: inline-flex;">   
+       
+ <div   class="image3">
+     <a onclick="mute(); changeImage(this)"  id="mute">
+ <img src="img/sc1.svg"  id="play" />
+    <img src="img/sc1-active.svg"   id="pause" />
+</a>
+
+</div>  
+   <div    class="image3">
+ <a onclick="mute(); changeImage(this)" id="mute">
+ <img src="img/sc2.svg"   id="play" />
+    <img src="img/sc2-active.svg"   id="pause" />
+</a>
+  
+</div>
+
+
+ </div> 
+
+      <div style="display: inline-flex;">   
+       
+ <div    class="image3">
+     <a onclick="mute(); changeImage(this)"  id="mute">
+ <img src="img/sc3.svg"  id="play" />
+    <img src="img/sc3-active.svg"   id="pause" />
+</a>
+
+</div> 
+          <div  class="image3">
+<a onclick="mute(); changeImage(this)" id="mute">
+ <img src="img/sc4.svg"   id="play" />
+    <img src="img/sc4-active.svg"   id="pause" />
+</a>
+ 
+</div>
+<br>
+ </div> 
+ </div> 
+      <br>
+     <a href="#" class=" quiz-botao" id="mostra_aba3"  onclick="mostrar_abas(this);">PRÓXIMO</a>
+   </section>
+ </div>
+
+
+ <div id="div_aba2" style="display:none;">
+  <section class="content-section3" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+    <h1 style="font-family: 'Qanelas-Bold'; ">SOMOS O QUE COMPRAMOS?</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Você costuma estar informado sobre tendências e novos produtos do mercado por quais meios?
+
+     </h3>
+     <img src="img/quiz.png" id="img-quiz" >
+      <br>
+     <a href="#" class="quiz-botao" id="mostra_aba3" onclick="mostrar_abas(this);">PRÓXIMO</a>
+   </section>
+ </div>
+
+
+
+ <div id="div_aba3" style="display:none;"> 
+   <section class="content-section3" id="quiz">
+    <div class="container text-center">
+
+     <h3 class="titulo-quiz">CONSUMISMO</h3>  
+      <h1 style="font-family: 'Qanelas-Bold'; ">SOMOS O QUE COMPRAMOS?</h1> 
+     <hr/>
+     <h3 class="tex-quiz">Para você, o quanto é importante ter bens materiais (quantidade e qualidade)?
+
+     </h3>
+    <div class='tours'>
+        <div>
+            <img style=" zoom:32%;">
+        </div> <br>
+        <div>
+          <p id="titulo-q"></p>
+        </div>
+ </div>
+   <form action="" id="grau">
+    <p >- <input type="range" id="slider" min="0" max="80" step="20"> +</p>
+
+ </form>
+    <script type="text/javascript">
+         var scale = [0, 20, 40, 60, 80, 100];
+    var range = {
+        0: {src : 'img/nivel1.png'},
+        20: {src : 'img/nivel2.png'},
+        40: {src : 'img/nivel3.png'},
+        60: {src : 'img/nivel5.png'},
+           80: {src : 'img/nivel6.png'},
+            
+    };
+
+    slideVal = 0;
+
+    $('#slider').on('input change', function(){
+
+        slideVal =  $('#slider').val();
+        update();
+    });
+
+    update();
+
+    function update(){
+
+            $('.tours img').attr('src', range[slideVal].src);
+            $('.tours p').text(range[slideVal].rangeText);
+             $('.tours span').text(range[slideVal].rangeText);
+    }
+    </script>
+<br>
+
+     <a href="info-2.html"  id="mostra_aba3" class=" quiz-botao">PRÓXIMO</a>
+   </section>
+ </div>
+
+  </div>
+<!-- JavaScripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/scrollsuave.js"></script>
+
+<script type="text/javascript">
+  $('#toggle').click(function() {
+    $(this).toggleClass('toggle-active');
+    $('#overlay').toggleClass('nav-active');
+  });</script>
+</body>
+
+
+<script type="text/javascript">
+  function mostrar_abas(obj) {
+
+    document.getElementById('div_aba1').style.display="none";
+    document.getElementById('div_aba2').style.display="none";
+    document.getElementById('div_aba3').style.display="none";
+
+    switch (obj.id) {
+      case 'mostra_aba1':
+      document.getElementById('div_aba1').style.display="block";
+      break
+      case 'mostra_aba2':
+      document.getElementById('div_aba2').style.display="block";
+      break
+      case 'mostra_aba3':
+      document.getElementById('div_aba3').style.display="block";
+      break
+
+    }
+  }
+</script>
+
+
+<script type="text/javascript">
+
+
+function mute() {}
+
+function changeImage(obj) {
+    obj.classList.toggle('playing');
+}
+
+
+
+
+
+
+</script>
+
+
+
+ 
+
+</html>

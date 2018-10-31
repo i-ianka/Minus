@@ -1,0 +1,94 @@
+ <script
+    type="text/javascript"
+    src="js/jquery-1.7.1.js"
+    
+  ></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+  <style type="text/css">
+
+.sort{width: 200px;  height:20px; display: block;  border: 1px solid gray; padding:5px;}
+.sort a{
+ text-align: right;
+}
+  </style>
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">
+
+
+    $(window).load(function(){
+      
+  $(document).ready(function() {
+
+ 
+    $(".drag").draggable({
+       revert: "invalid"
+    });
+
+    $(".sort").droppable({
+     drop: function( event, ui ) {
+         if(!($(this).children(".drag").size() == 1)) {
+             $(ui.draggable[0]).appendTo($(this));
+             ui.draggable.css({
+                    left: 0,
+                    top: 0
+                })
+         } else {
+            $(ui.draggable[0]).draggable("option","revert",true);
+         }
+      }
+
+    });
+  });
+
+    });
+
+</script>
+
+<link rel="stylesheet" type="text/css" href=" css/estilo.css">
+<div style="display:flex">
+
+  <div class="parent">
+  <div style="display: block;">
+   <div class="sort" id="3"></div>  
+     <div class="sort" id="1-2"></div> 
+    <div class="sort" id="4"></div>
+      <div class="sort" id="4"></div>
+         <div style="margin-top: 24px;"> Total exxxx</div> <br> </div> </div>
+<div style="display: block;"><center><p float="right">1</p> <p>2</p> <p>3</p> <p>4</p></center></div> 
+
+<br>
+</div>
+
+<div class="parent" style="width: 10%;"><center>
+
+
+ 
+
+<div style="display: block;">
+   <div class="sort" id="1"><a href="#" class="drag">ALIMENTOS</a></div>
+  <br>
+ 
+
+ <div class="sort" id="2"><a href="#" class="drag">ELETRÔNICOS</a></div>
+  <br>
+ 
+ </div>
+
+</div> <br>
+
+
+<div style="display: block;">
+  <div class="sort" id="2-2"><a href="#" class="drag">VESTIMENTAS</a></div>
+  <br>
+ 
+  <div class="sort" id="3-2"><a href="#" class="drag">ENTRETENIMENTO</a></div>
+  <br>
+</div> 
+</div> 
+
+</div>
